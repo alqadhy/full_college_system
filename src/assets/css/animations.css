@@ -1,0 +1,17 @@
+/* Start Spinner Animation */
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* End Spinner Animation */
+/* Start Pulse Animation */
+@keyframes pulseAnimation {
+  to {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+/* End Pulse Animation */

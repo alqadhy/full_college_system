@@ -1,0 +1,18 @@
+/* Start Not Found */
+.not-found-page {
+  background: url("../../imgs/404_bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: var(--pad-120) 0;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.not-found-page p {
+  margin: 30px 0;
+}
+
+.not-found-page .main-btn {
+  margin: 0 auto;
+}
+
+/* End Not Found */

@@ -1,0 +1,28 @@
+/* Start Login */
+.login-page {
+  padding: var(--pad-100) 0;
+}
+
+.login-page .login-form {
+  background-color: var(--white-color);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--pad-30);
+  border: var(--light-border);
+  border-radius: var(--border-radius-6);
+}
+
+.login-page .forgot-psw-link {
+  display: block;
+  width: fit-content;
+  margin: 20px auto 0;
+  font-weight: bold;
+  transition: color var(--transition-normal);
+}
+
+
+.login-page .forgot-psw-link:hover {
+  color: var(--primary-color);
+}
+
+/* End Login */

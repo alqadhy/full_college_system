@@ -1,0 +1,128 @@
+/*Start flex-wrapper */
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* End flex-wrapper */
+/* Start flex-center */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* End flex-center */
+/* Start flex-space-between */
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* End flex-space-between */
+/* Start font-large */
+.font-large {
+  font-size: var(--font-size-52);
+}
+
+@media (max-width:767px) {
+  .font-large {
+    font-size: var(--font-size-40);
+  }
+}
+
+/* End font-large */
+/* Start font-big */
+.font-big {
+  font-size: var(--font-size-40);
+}
+
+@media (max-width:767px) {
+  .font-big {
+    font-size: var(--font-size-32);
+  }
+}
+
+/* End font-big */
+/* Start font-medium */
+.font-medium {
+  font-size: var(--font-size-18);
+}
+
+@media (max-width:767px) {
+  .font-medium {
+    font-size: var(--font-size-16);
+  }
+}
+
+/* End font-medium */
+/* Start grid-4 */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 1199px) {
+  .grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  }
+}
+
+/* End grid-4 */
+/* Start move-to-top-hover */
+.move-to-top-hover {
+  transition: transform var(--transition-normal);
+}
+
+.move-to-top-hover:hover {
+  transform: translateY(-10px);
+}
+
+/* End move-to-top-hover */
+/* Start limited-lined */
+.limited-lines {
+  /* Fit Only In n Lines Maximum */
+  display: -webkit-box;
+  -webkit-line-clamp: var(--n);
+  line-clamp: var(--n);
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  overflow: hidden;
+}
+
+/* End limited-lined */
+/* Start backgound-colored-section */
+.backgound-colored-section {
+  position: relative;
+  z-index: var(--z-index-2);
+}
+
+.backgound-colored-section::before {
+  content: "";
+  background-color: var(--primary-color);
+  opacity: .15;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: var(--z-index--1);
+}
+
+/* End backgound-colored-section */
+/* Start force-ltr */
+.force-ltr {
+  direction: ltr !important;
+}
+
+/* End force-ltr */
+/* Start grid-gap */
+.grid-gap {
+  display: grid;
+  gap: 20px;
+}
+
+/* End grid-gap */

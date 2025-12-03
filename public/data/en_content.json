@@ -1,0 +1,196 @@
+{
+  "university_data": {
+    "logo": {
+      "icon": "https://png.pngtree.com/png-clipart/20211017/original/pngtree-university-logo-png-png-image_6855396.png",
+      "title": "EU University"
+    },
+    "background_img": "https://images2.alphacoders.com/684/684535.jpg",
+    "name": "EU University For Computer Science and IT",
+    "short_name": "EU University",
+    "used_currency": "EGP",
+    "location": "Giza, Egypt",
+    "email": "info@eu-university.edu",
+    "phone": "+20 123 456 7890",
+    "social_media": {
+      "facebook": {
+        "icon": "https://img.freepik.com/premium-photo/facebook-logo_1080029-107.jpg?semt=ais_hybrid&w=740&q=80",
+        "title": "Facebook",
+        "url": "https://www.facebook.com"
+      },
+      "x": {
+        "icon": "https://img.freepik.com/free-vector/twitter-new-2023-x-logo-white-background-vector_1017-45422.jpg?semt=ais_hybrid&w=740&q=80",
+        "title": "X",
+        "url": "https://www.x.com"
+      },
+      "instagram": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/1384/1384063.png",
+        "title": "Instagram",
+        "url": "https://www.instagram.com"
+      },
+      "linkedin": {
+        "icon": "https://img.freepik.com/premium-vector/vinnytsia-ukraine-april-29-2023-popular-social-media-logo-icon-linkedin-vector-design-realistic-editorial-sign_545793-1682.jpg?semt=ais_hybrid&w=740&q=80",
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/school"
+      }
+    }
+  },
+  "main_style_colors": {
+    "primary_color": "#0046FF",
+    "secondary_color": "#001BB7"
+  },
+  "pages": {
+    "home": "Home",
+    "login": "Login",
+    "dashboard": "Dashboard",
+    "email_verification": "Email Verification",
+    "change_password": "Change Password",
+    "assignments": "Assignments",
+    "events": "Events",
+    "enrolled_courses": "Enrolled Courses",
+    "enroll_new_course": "Enroll New Course",
+    "marks": "Marks",
+    "weekly_schedule": "Weekly Schedule",
+    "payments_and_fees": "Payments & Fees",
+    "to_do_list": "To-Do List",
+    "messages": "Messages",
+    "announcements": "Announcements",
+    "log_out": "Logout"
+  },
+  "headings_and_titles": {
+    "page_loader_heading": "Loading, Please Wait...",
+    "main_heading": "EU University For Computer Science and IT!",
+    "departments_heading": "Departments",
+    "call_to_action_heading": "Start Your Journey Today!",
+    "links_heading": "Links",
+    "contact_us_heading": "Contact Us",
+    "social_media_heading": "Follow Us",
+    "sidebar_title": "Portal",
+    "student_details_title": "Student Details",
+    "stats_title": "Statistics",
+    "required_assignments_title": "Required Assignments",
+    "upcoming_events_title": "Upcoming Events",
+    "today_tasks_title": "Today's Tasks",
+    "recent_messages_title": "Recent Messages",
+    "today_schedule_title": "Today's Schedule",
+    "all_assignments_heading": "All Assignments",
+    "all_enrolled_courses_heading": "All Enrolled Courses",
+    "enroll_new_course_heading": "Enroll in a New Course",
+    "all_marks_heading": "All Marks",
+    "weekly_schedule_heading": "Weekly Schedule",
+    "payments_and_fees_heading": "Payments & Fees Overview",
+    "to_do_list_heading": "To-Do List",
+    "all_messages_heading": "All Messages",
+    "all_announcements_heading": "All Announcements",
+    "fees_breakdown_title": "Fees Breakdown",
+    "progress_overview_title": "Progress Overview",
+    "last_transactions_title": "Last Transactions",
+    "your_tasks_title": "Your Tasks"
+  },
+  "descriptions_and_paragraphs": {
+    "main_description": "A modern, secure, and fully integrated college management system that streamlines student services, instructor tools, and administrative operations—all in one unified platform.",
+    "secondary_description": "Join EU University today and take the first step towards a brighter future in computer science and IT!",
+    "404_paragraph": "Seems like this is not the web page you are looking for!",
+    "email_verification_paragraph": "we have sent an OTP to your academic email address. Please enter the OTP below to verify your email."
+  },
+  "text": {
+    "copyrights_text": "Copyrights",
+    "all_right_reserved_text": "All rights reserved",
+    "didnt_receive_otp_text": "Didn't receive the OTP?",
+    "student_attributes_text": {
+      "code": "Code",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "department": "Department",
+      "address": "Address",
+      "gpa": "GPA"
+    },
+    "attendence_percentage_text": "Attendance Percentage",
+    "paid_money_text": "Paid Money",
+    "num_of_enrolled_courses_text": "Number of Enrolled Courses:",
+    "credit_hours_text": "Credit Hours:",
+    "year_of_study_text": "Year of Study:",
+    "semester_text": "Semester:",
+    "total_fees_text": "Total Fees:",
+    "paid_fees_text": "Paid Fees:",
+    "due_fees_text": "Due Fees:",
+    "empty_paragraph_text": "No content to show!",
+    "view_message": "View Message"
+  },
+  "buttons_and_links": {
+    "access_dashboard_button": "Access Your Dashboard",
+    "login_now_button": "Login Now",
+    "return_home_button": "Return to Home Page",
+    "forgot_password_link": "Forgot Password?",
+    "verify_email_button": "Verify Email",
+    "resend_otp_link": "Resend OTP",
+    "reset_password_button": "Reset Password",
+    "view_all_link": "View All",
+    "manage_all_tasks_link": "Manage All Tasks",
+    "confirm_button": "Confirm",
+    "cancel_button": "Cancel"
+  },
+  "inputs_labels": {
+    "code_input_label": "Code",
+    "password_input_label": "Password",
+    "new_password_input_label": "New Password",
+    "confirm_password_input_label": "Confirm Password",
+    "search_input_label": "Search...",
+    "add_new_task_input_label": "Add a new task..."
+  },
+  "features": {
+    "feature_1": {
+      "title": "Comprehensive Student Management",
+      "description": "Easily manage student records, enrollment, attendance, and academic performance all in one place."
+    },
+    "feature_2": {
+      "title": "Instructor Tools",
+      "description": "Empower instructors with tools for course management, grading, and communication with students."
+    },
+    "feature_3": {
+      "title": "Administrative Efficiency",
+      "description": "Streamline administrative tasks such as scheduling, reporting, and fee management."
+    },
+    "feature_4": {
+      "title": "User-Friendly Interface",
+      "description": "Intuitive design ensures that students, instructors, and administrators can navigate the system with ease."
+    }
+  },
+  "departments": {
+    "computer_science": "Computer Science",
+    "information_systems": "Information Systems",
+    "business_management": "Business Management",
+    "tourism": "Tourism and Hotels"
+  },
+  "alerts": {
+    "code_is_empty": "The code field is required!",
+    "password_is_empty": "The password field is required!",
+    "code_or_password_is_wrong": "The code or the passord is wrong!",
+    "login_successfully": "Login Successfully!",
+    "otp_is_incorrect": "Wrong OTP!",
+    "passwords_are_not_identical": "Password are not identical!",
+    "password_changed_successfully": "Password changed successfully!",
+    "empty_task": "Cannot add empty task!",
+    "task_added_successfully": "Task added successfully!",
+    "must_login": "You must login to access your dashboard!",
+    "already_loggedin": "You have already loggedin!",
+    "logout_confirm": "Are you sure you want to log out?",
+    "logout_successfully": "Logged Out Successfully!"
+  },
+  "tables_attributes": {
+    "today_schedule_table": {
+      "time": "Time",
+      "course": "Course",
+      "instructor": "Instructor",
+      "location": "Location"
+    },
+    "assignments_table": {
+      "document": "Document",
+      "course": "Course",
+      "course_code": "Course Code",
+      "instructor": "Instructor",
+      "due_date": "Due Date",
+      "status": "Status"
+    }
+  }
+}

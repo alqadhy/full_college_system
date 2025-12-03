@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title_en": "Tech Talk: The Future of AI",
+    "title_ar": "حديث تقني: مستقبل الذكاء الاصطناعي",
+    "type_en": "Seminar",
+    "type_ar": "ندوة",
+    "date": "2025-12-10",
+    "start_time": "10:00 AM",
+    "end_time": "12:00 PM",
+    "location_en": "Auditorium A",
+    "location_ar": "المدرج أ",
+    "description_en": "Join us for an insightful talk on the advancements and future trends in Artificial Intelligence.",
+    "description_ar": "انضم إلينا في حديث ملهم حول التقدمات والاتجاهات المستقبلية في مجال الذكاء الاصطناعي."
+  },
+  {
+    "id": 2,
+    "title_en": "Lab Workshop: Cybersecurity Basics",
+    "title_ar": "ورشة عمل مختبر: أساسيات الأمن السيبراني",
+    "type_en": "Workshop",
+    "type_ar": "ورشة عمل",
+    "date": "2025-12-30",
+    "start_time": "11:00 AM",
+    "end_time": "01:00 PM",
+    "location_en": "Auditorium C",
+    "location_ar": "المدرج ج",
+    "description_en": "This workshop will cover the fundamental concepts of cybersecurity and best practices.",
+    "description_ar": "ستغطي هذه الورشة المفاهيم الأساسية للأمن السيبراني وأفضل الممارسات."
+  }
+]

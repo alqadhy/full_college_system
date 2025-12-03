@@ -1,0 +1,124 @@
+{
+  "saturday": [
+    {
+      "id": 1,
+      "time": "10:00 AM - 12:00 PM",
+      "course_code": "CS201",
+      "course_en": "Object-Oriented Programming",
+      "course_ar": "البرمجة كائنية التوجه",
+      "instructor_en": "Rami Nasser",
+      "instructor_ar": "رامي ناصر",
+      "location_en": "Room 101",
+      "location_ar": "الغرفة ١٠١"
+    },
+    {
+      "id": 2,
+      "time": "01:00 PM - 03:00 PM",
+      "course_code": "CS202",
+      "course_en": "Algorithms",
+      "course_ar": "الخوارزميات",
+      "instructor_en": "Sara Ali",
+      "instructor_ar": "سارة علي",
+      "location_en": "Room 102",
+      "location_ar": "الغرفة ١٠٢"
+    }
+  ],
+  "sunday": [
+    {
+      "id": 1,
+      "time": "10:00 AM - 12:00 PM",
+      "course_code": "CS201",
+      "course_en": "Object-Oriented Programming",
+      "course_ar": "البرمجة كائنية التوجه",
+      "instructor_en": "Ahmed Taha",
+      "instructor_ar": "أحمد طه",
+      "location_en": "Room 101",
+      "location_ar": "الغرفة ١٠١"
+    },
+    {
+      "id": 2,
+      "time": "01:00 PM - 03:00 PM",
+      "course_code": "CS202",
+      "course_en": "Algorithms",
+      "course_ar": "الخوارزميات",
+      "instructor_en": "Gamal Kamel",
+      "instructor_ar": "جمال كامل",
+      "location_en": "Room 102",
+      "location_ar": "الغرفة ١٠٢"
+    },
+    {
+      "id": 3,
+      "time": "09:00 PM - 11:00 PM",
+      "course_code": "CS204",
+      "course_en": "Databases",
+      "course_ar": "قواعد البيانات",
+      "instructor_en": "Youssef Waleed",
+      "instructor_ar": "يوسف وليد",
+      "location_en": "Room 105",
+      "location_ar": "الغرفة ١٠٥"
+    }
+  ],
+  "monday": [],
+  "tuesday": [
+    {
+      "id": 1,
+      "time": "10:00 AM - 12:00 PM",
+      "course_code": "CS203",
+      "course_en": "Data Structures",
+      "course_ar": "هياكل البيانات",
+      "instructor_en": "Rami Nasser",
+      "instructor_ar": "رامي ناصر",
+      "location_en": "Room 103",
+      "location_ar": "الغرفة ١٠٣"
+    }
+  ],
+  "wednesday": [
+    {
+      "id": 1,
+      "time": "10:00 AM - 12:00 PM",
+      "course_code": "CS205",
+      "course_en": "Web Development",
+      "course_ar": "تطوير الويب",
+      "instructor_en": "Youssef Waleed",
+      "instructor_ar": "يوسف وليد",
+      "location_en": "Room 104",
+      "location_ar": "الغرفة ١٠٤"
+    },
+    {
+      "id": 2,
+      "time": "01:00 PM - 03:00 PM",
+      "course_code": "CS206",
+      "course_en": "Mobile App Development",
+      "course_ar": "تطوير تطبيقات الجوال",
+      "instructor_en": "Sara Ali",
+      "instructor_ar": "سارة علي",
+      "location_en": "Room 106",
+      "location_ar": "الغرفة ١٠٦"
+    }
+  ],
+  "thursday": [
+    {
+      "id": 1,
+      "time": "10:00 AM - 12:00 PM",
+      "course_code": "CS207",
+      "course_en": "Operating Systems",
+      "course_ar": "أنظمة التشغيل",
+      "instructor_en": "Sara Ali",
+      "instructor_ar": "سارة علي",
+      "location_en": "Room 107",
+      "location_ar": "الغرفة ١٠٧"
+    },
+    {
+      "id": 2,
+      "time": "10:00 AM - 12:00 PM",
+      "course_code": "CS207",
+      "course_en": "Operating Systems",
+      "course_ar": "أنظمة التشغيل",
+      "instructor_en": "Sara Ali",
+      "instructor_ar": "سارة علي",
+      "location_en": "Room 107",
+      "location_ar": "الغرفة ١٠٧"
+    }
+  ],
+  "friday": []
+}

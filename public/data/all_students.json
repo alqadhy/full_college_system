@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "code": "CS2023001",
+    "role_en": "student",
+    "role_ar": "طالب",
+    "name_en": "Ahmed Mohamed",
+    "name_ar": "أحمد محمد",
+    "email": "ahmed@student.edu",
+    "phone": "01012345678",
+    "password": "password123",
+    "address_en": "123 Main St, Giza, Egypt",
+    "address_ar": "١٢٣ شارع الرئيسي، الجيزة، مصر",
+    "department_en": "Computer Science",
+    "department_ar": "علوم الحاسب",
+    "image": "https://img.freepik.com/free-photo/school-boy-with-book-park_23-2148199240.jpg?semt=ais_hybrid&w=740&q=80",
+    "gpa": 3.42,
+    "year": 2,
+    "semester": 2,
+    "stats": {
+      "attendance_percentage": 82,
+      "fees_total": 16400,
+      "fees_paid": 6000
+    }
+  },
+  {
+    "id": 2,
+    "code": "CS2023002",
+    "role_en": "student",
+    "role_ar": "طالب",
+    "name_en": "Ali Mosa",
+    "name_ar": "علي موسى",
+    "email": "ali@student.edu",
+    "phone": "01012345679",
+    "password": "testpass456",
+    "address_en": "345 Main St, Giza, Egypt",
+    "address_ar": "٣٤٥ شارع الرئيسي، الجيزة، مصر",
+    "department_en": "Information Systems",
+    "department_ar": "نظم المعلومات",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkVT1tSvNzeBSevPVAQVdRdSvy5EQX5Ko-FQ&s",
+    "gpa": 3.81,
+    "year": 4,
+    "semester": 1,
+    "stats": {
+      "attendance_percentage": 63,
+      "fees_total": 23000,
+      "fees_paid": 12000
+    }
+  }
+]

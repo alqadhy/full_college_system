@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "document_link": "https://drive.google.com/drive/folders/0B3z2uLn_MfOXZnJOWUlFNjNxZkE?resourcekey=0-PfA6ZMSyq3MQOY6EUVzLkQ",
+    "subject_en": "OOP",
+    "subject_ar": "البرمجة كائنية التوجه",
+    "subject_code": "CS201",
+    "instructor_en": "Dr. Sara Ali",
+    "instructor_ar": "د. سارة علي",
+    "title": "OOP Assignment 1",
+    "due_date": "2025-12-15",
+    "status": "Pending",
+    "is_submitted": false
+  },
+  {
+    "id": 2,
+    "document_link": "https://drive.google.com/drive/folders/0B3z2uLn_MfOXZnJOWUlFNjNxZkE?resourcekey=0-PfA6ZMSyq3MQOY6EUVzLkQ",
+    "subject_en": "Algorithms",
+    "subject_ar": "الخوارزميات",
+    "subject_code": "CS202",
+    "instructor_en": "Dr. Amr Nasser",
+    "instructor_ar": "د. عمرو ناصر",
+    "title": "Algorithms Assignment 1",
+    "due_date": "2025-12-04",
+    "status": "Pending",
+    "is_submitted": false
+  },
+  {
+    "id": 3,
+    "document_link": "https://drive.google.com/drive/folders/0B3z2uLn_MfOXZnJOWUlFNjNxZkE?resourcekey=0-PfA6ZMSyq3MQOY6EUVzLkQ",
+    "subject_en": "Data Structures",
+    "subject_ar": "هياكل البيانات",
+    "subject_code": "CS203",
+    "instructor_en": "Dr. Mohammed Ramadan",
+    "instructor_ar": "د. محمد رمضان",
+    "title": "Data Structures Assignment 1",
+    "due_date": "2025-12-25",
+    "status": "Pending",
+    "is_submitted": false
+  }
+]

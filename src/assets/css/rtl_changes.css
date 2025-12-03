@@ -1,0 +1,138 @@
+/* Start tHead */
+[dir="rtl"] thead td {
+  border-left: none;
+  border-right: 1px solid var(--gray-color);
+  border-top: 1px solid var(--gray-color);
+  border-bottom: 1px solid var(--gray-color);
+}
+
+[dir="rtl"] thead td:last-child {
+  border-left: 1px solid var(--gray-color);
+}
+
+/* End tHead */
+/* Start Main Button */
+[dir="rtl"] .main-btn::before {
+  left: initial;
+  right: 0;
+}
+
+/* End Main Button */
+/* Start Features */
+[dir="rtl"] .features .ft-box .icon-wrapper {
+  left: initial;
+  right: 20px;
+}
+
+/* End Features */
+/* Start Main Heading */
+[dir="rtl"] .main-heading::after {
+  background-image: linear-gradient(to left,
+      var(--primary-color) 70%,
+      var(--white-color) 70%,
+      var(--white-color) 100%);
+  left: initial;
+  right: 0;
+}
+
+/* End Main Heading */
+/* Start Call To Action */
+[dir="rtl"] .call-to-action .pulse-animated {
+  right: initial;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+/* End Call To Action */
+/* Start Footer */
+[dir="rtl"] footer .contact-info .icon {
+  transform: scaleX(-1);
+}
+
+/* End Footer */
+/* Start Input Field */
+[dir="rtl"] .input-field label {
+  left: initial;
+  right: 10px;
+}
+
+/* End Input Field */
+/* Toast Notification */
+[dir="rtl"] .Toastify__close-button {
+  right: initial;
+  left: 6px;
+}
+
+/* End Notification */
+/* Start Sidebar */
+@media (max-width:991px) {
+  [dir="rtl"] .sidebar {
+    left: initial;
+    right: 0;
+    transform: translateX(100%);
+  }
+}
+
+[dir="rtl"] .sidebar .close-btn {
+  transform: translate(-15px, -15px);
+}
+
+[dir="rtl"] .sidebar .links :where(a, .logout-btn) .icon {
+  transform: scaleX(-1);
+}
+
+/* End Sidebar */
+/* Start Progrss Bar */
+[dir="rtl"] .stu-dashboard-page .progress-bar::before,
+[dir="rtl"] .stu-dashboard-page .progress-bar::after {
+  left: initial;
+  right: var(--percentage);
+  transform: translate(50%, -60%);
+}
+
+[dir="rtl"] .stu-dashboard-page .progress-bar:hover::before,
+[dir="rtl"] .stu-dashboard-page .progress-bar:hover::after {
+  transform: translate(50%, -100%);
+}
+
+[dir="rtl"] .stu-dashboard-page .progress-bar .total-fees-txt {
+  text-align: left;
+}
+
+/* End Progrss Bar */
+/* Start View All Link */
+[dir="rtl"] .view-all-link::before {
+  left: initial;
+  right: 0;
+}
+
+/* End View All Link */
+/* Start Responsive Table */
+[dir="rtl"] .responsive-table .sub-title {
+  left: initial;
+  right: 0;
+}
+
+/* End Responsive Table */
+/* Start Search Bar */
+[dir="rtl"] .search-bar input {
+  padding: 10px var(--pad-30) 10px 10px;
+}
+
+[dir="rtl"] .search-bar .icon {
+  left: initial;
+  right: 10px;
+}
+
+/* End Search Bar */
+/* Start Sort Bar */
+[dir="rtl"] .sort-bar select {
+  padding: 10px 10px 10px var(--pad-30);
+}
+
+[dir="rtl"] .sort-bar .icon {
+  right: initial;
+  left: 10px;
+}
+
+/* End Sort Bar */

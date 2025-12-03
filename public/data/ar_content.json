@@ -1,0 +1,196 @@
+{
+  "university_data": {
+    "logo": {
+      "icon": "https://png.pngtree.com/png-clipart/20211017/original/pngtree-university-logo-png-png-image_6855396.png",
+      "title": "جامعة الاتحاد الأوروبية"
+    },
+    "background_img": "https://images2.alphacoders.com/684/684535.jpg",
+    "name": "جامعة الاتحاد الأوروبية لعلوم الحاسب وتكنولوجيا المعلومات",
+    "short_name": "جامعة الاتحاد الأوروبية",
+    "used_currency": "EGP",
+    "location": "الجيزة، مصر",
+    "email": "info@eu-university.edu",
+    "phone": "+20 123 456 7890",
+    "social_media": {
+      "facebook": {
+        "icon": "https://img.freepik.com/premium-photo/facebook-logo_1080029-107.jpg?semt=ais_hybrid&w=740&q=80",
+        "title": "Facebook",
+        "url": "https://www.facebook.com"
+      },
+      "x": {
+        "icon": "https://img.freepik.com/free-vector/twitter-new-2023-x-logo-white-background-vector_1017-45422.jpg?semt=ais_hybrid&w=740&q=80",
+        "title": "X",
+        "url": "https://www.x.com"
+      },
+      "instagram": {
+        "icon": "https://cdn-icons-png.flaticon.com/512/1384/1384063.png",
+        "title": "Instagram",
+        "url": "https://www.instagram.com"
+      },
+      "linkedin": {
+        "icon": "https://img.freepik.com/premium-vector/vinnytsia-ukraine-april-29-2023-popular-social-media-logo-icon-linkedin-vector-design-realistic-editorial-sign_545793-1682.jpg?semt=ais_hybrid&w=740&q=80",
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/school"
+      }
+    }
+  },
+  "main_style_colors": {
+    "primary_color": "#0046FF",
+    "secondary_color": "#001BB7"
+  },
+  "pages": {
+    "home": "الصفحة الرئيسية",
+    "login": "تسجيل الدخول",
+    "dashboard": "لوحة التحكم",
+    "email_verification": "تأكيد البريد الإلكتروني",
+    "change_password": "تغيير كلمة المرور",
+    "assignments": "الواجبات",
+    "events": "الفعاليات",
+    "enrolled_courses": "المقررات المسجلة",
+    "enroll_new_course": "تسجيل مقرر جديد",
+    "marks": "الدرجات",
+    "weekly_schedule": "الجدول الأسبوعي",
+    "payments_and_fees": "المدفوعات والرسوم",
+    "to_do_list": "قائمة المهام",
+    "messages": "الرسائل",
+    "announcements": "الإعلانات",
+    "log_out": "تسجيل الخروج"
+  },
+  "headings_and_titles": {
+    "page_loader_heading": "جاري التحميل، يرجى الانتظار...",
+    "main_heading": "جامعة الاتحاد الأوروبية لعلوم الحاسب وتكنولوجيا المعلومات!",
+    "departments_heading": "الأقسام",
+    "call_to_action_heading": "ابدأ رحلتك اليوم!",
+    "links_heading": "الوصول السريع",
+    "contact_us_heading": "تواصل معنا",
+    "social_media_heading": "تابعنا",
+    "sidebar_title": "بوابة",
+    "student_details_title": "بيانات الطالب",
+    "stats_title": "الإحصائيات",
+    "required_assignments_title": "الواجبات المطلوبة",
+    "upcoming_events_title": "الفعاليات القادمة",
+    "today_tasks_title": "مهام اليوم",
+    "recent_messages_title": "أحدث الرسائل",
+    "today_schedule_title": "جدول اليوم",
+    "all_assignments_heading": "جميع الواجبات",
+    "all_enrolled_courses_heading": "جميع المقررات المسجلة",
+    "enroll_new_course_heading": "تسجيل مقرر جديد",
+    "all_marks_heading": "جميع الدرجات",
+    "weekly_schedule_heading": "الجدول الأسبوعي",
+    "payments_and_fees_heading": "نظرة عامة على الرسوم والمدفوعات",
+    "to_do_list_heading": "قائمة المهام",
+    "all_messages_heading": "جميع الرسائل",
+    "all_announcements_heading": "جميع الإعلانات",
+    "fees_breakdown_title": "تفاصيل الرسوم",
+    "progress_overview_title": "نظرة عامة على التقدم",
+    "last_transactions_title": "آخر المعاملات",
+    "your_tasks_title": "مهامك"
+  },
+  "descriptions_and_paragraphs": {
+    "main_description": "نظام إدارة جامعي حديث وآمن ومتكامل يعمل على تبسيط خدمات الطلاب وأدوات الأساتذة والعمليات الإدارية — كل ذلك في منصة واحدة موحدة.",
+    "secondary_description": "انضم إلى جامعة الاتحاد الأوروبية اليوم وابدأ خطوتك الأولى نحو مستقبل أكثر إشراقًا في علوم الحاسب وتكنولوجيا المعلومات!",
+    "404_paragraph": "يبدو أنك تبحث عن صفحة غير موجودة!",
+    "email_verification_paragraph": "لقد قمنا بإرسال رمز التحقق (OTP) إلى بريدك الإلكتروني الأكاديمي. يرجى إدخال الرمز أدناه للتحقق من بريدك."
+  },
+  "text": {
+    "copyrights_text": "حقوق الملكية",
+    "all_right_reserved_text": "كل الحقوق محفوظة",
+    "didnt_receive_otp_text": "لم تستلم رمز التحقق؟",
+    "student_attributes_text": {
+      "code": "كود الطالب",
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "department": "القسم",
+      "address": "العنوان",
+      "gpa": "المعدل التراكمي"
+    },
+    "attendence_percentage_text": "نسبة الحضور",
+    "paid_money_text": "المدفوع",
+    "num_of_enrolled_courses_text": "عدد المقررات المسجلة:",
+    "credit_hours_text": "الساعات المعتمدة:",
+    "year_of_study_text": "السنة الدراسية:",
+    "semester_text": "الفصل الدراسي:",
+    "total_fees_text": "إجمالي الرسوم:",
+    "paid_fees_text": "الرسوم المدفوعة:",
+    "due_fees_text": "الرسوم المتبقية:",
+    "empty_paragraph_text": "لا يوجد محتوي لعرضه!",
+    "view_message": "عرض الرسالة"
+  },
+  "buttons_and_links": {
+    "access_dashboard_button": "الوصول إلى لوحة التحكم",
+    "login_now_button": "تسجيل الدخول الآن",
+    "return_home_button": "العودة للصفحة الرئيسية",
+    "forgot_password_link": "هل نسيت كلمة المرور؟",
+    "verify_email_button": "تأكيد البريد الإلكتروني",
+    "resend_otp_link": "إعادة إرسال الرمز",
+    "reset_password_button": "إعادة تعيين كلمة المرور",
+    "view_all_link": "عرض الكل",
+    "manage_all_tasks_link": "إدارة جميع المهام",
+    "confirm_button": "تأكيد",
+    "cancel_button": "إلغاء"
+  },
+  "inputs_labels": {
+    "code_input_label": "الكود",
+    "password_input_label": "كلمة المرور",
+    "new_password_input_label": "كلمة المرور الجديدة",
+    "confirm_password_input_label": "تأكيد كلمة المرور",
+    "search_input_label": "بحث...",
+    "add_new_task_input_label": "أضف مهمة جديدة..."
+  },
+  "features": {
+    "feature_1": {
+      "title": "إدارة شاملة للطلاب",
+      "description": "يمكنك إدارة سجلات الطلاب والتسجيل والحضور والأداء الأكاديمي بسهولة في مكان واحد."
+    },
+    "feature_2": {
+      "title": "أدوات الأساتذة",
+      "description": "تزويد الأساتذة بالأدوات اللازمة لإدارة المقررات، والتقييم، والتواصل مع الطلاب."
+    },
+    "feature_3": {
+      "title": "كفاءة إدارية",
+      "description": "تبسيط المهام الإدارية مثل الجدولة، وإعداد التقارير، وإدارة الرسوم."
+    },
+    "feature_4": {
+      "title": "واجهة سهلة الاستخدام",
+      "description": "تصميم بديهي يضمن سهولة التنقل للطلاب والأساتذة والإداريين."
+    }
+  },
+  "departments": {
+    "computer_science": "علوم الحاسب",
+    "information_systems": "نظم المعلومات",
+    "business_management": "إدارة الأعمال",
+    "tourism": "السياحة والفنادق"
+  },
+  "alerts": {
+    "code_is_empty": "حقل الكود مطلوب!",
+    "password_is_empty": "حقل كلمة المرور مطلوب!",
+    "code_or_password_is_wrong": "الكود أو كلمة المرور غير صحيحة!",
+    "login_successfully": "تم تسجيل الدخول بنجاح!",
+    "otp_is_incorrect": "رمز التحقق غير صحيح!",
+    "passwords_are_not_identical": "كلمتا المرور غير متطابقتين!",
+    "password_changed_successfully": "تم تغيير كلمة المرور بنجاح!",
+    "empty_task": "لا يمكن إضافة مهمة فارغة!",
+    "task_added_successfully": "تم إضافة المهمة بنجاح!",
+    "must_login": "يجب تسجيل الدخول أولا للوصول للوحة التحكم الخاصة بك!",
+    "already_loggedin": "لقد قمت بتسجيل الدخول بالفعل!",
+    "logout_confirm": "هل انت متأكد من رغبتك في تسجيل الخروج؟",
+    "logout_successfully": "تم تسجيل الخروج بنجاح!"
+  },
+  "tables_attributes": {
+    "today_schedule_table": {
+      "time": "معاد المحاضرة",
+      "course": "المادة",
+      "instructor": "الدكتوز",
+      "location": "المكان"
+    },
+    "assignments_table": {
+      "document": "المِلَفّ",
+      "course": "المادة",
+      "course_code": "رمز المقرر",
+      "instructor": "المُحاضِر",
+      "due_date": "تاريخ التسليم",
+      "status": "الحالة"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "sender_name_en": "Dr. Sara Ali",
+    "sender_name_ar": "د. سارة علي",
+    "sender_profile_pic": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740&q=80",
+    "subject_en": "Welcome to OOP Course",
+    "subject_ar": "مرحبًا بك في مقرر البرمجة كائنية التوجه",
+    "content_en": "Dear Student, Welcome to the Object-Oriented Programming course. Looking forward to a great semester!",
+    "content_ar": "عزيزي الطالب، مرحبًا بك في مقرر البرمجة كائنية التوجه. نتطلع إلى فصل دراسي رائع!",
+    "date": "2025-09-01",
+    "is_read": false
+  },
+  {
+    "id": 2,
+    "sender_name_en": "Admin Office",
+    "sender_name_ar": "مكتب الإدارة",
+    "sender_profile_pic": "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740&q=80",
+    "subject_en": "Tuition Fee Reminder",
+    "subject_ar": "تذكير برسوم التعليم",
+    "content_en": "Dear Student, This is a reminder that your tuition fee for the semester is due next week. Please make the payment on time.",
+    "content_ar": "عزيزي الطالب، هذا تذكير بأن رسوم التعليم للفصل الدراسي مستحقة الأسبوع المقبل. يرجى إجراء الدفع في الوقت المحدد.",
+    "date": "2025-11-20",
+    "is_read": true
+  }
+]
