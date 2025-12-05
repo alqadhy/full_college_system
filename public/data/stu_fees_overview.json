@@ -1,0 +1,27 @@
+{
+  "used_currency": "EGP",
+  "total_fees": "16400",
+  "paid_amount": "6000",
+  "last_transactions": [
+    {
+      "id": 1,
+      "date": "2025-10-01",
+      "description_en": "Tuition Fee Payment",
+      "description_ar": "دفع رسوم التعليم",
+      "amount": 3000,
+      "status": "Completed",
+      "method_en": "Cash",
+      "method_ar": "كاش"
+    },
+    {
+      "id": 2,
+      "date": "2025-11-15",
+      "description_en": "Tuition Fee Payment",
+      "description_ar": "دفع رسوم التعليم",
+      "amount": 3000,
+      "status": "Completed",
+      "method_en": "Cash",
+      "method_ar": "كاش"
+    }
+  ]
+}

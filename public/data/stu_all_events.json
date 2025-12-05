@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title_en": "Tech Talk: The Future of AI",
+    "title_ar": "حديث تقني: مستقبل الذكاء الاصطناعي",
+    "type_en": "Seminar",
+    "type_ar": "ندوة",
+    "date": "2025-12-10",
+    "start_time": "10:00 AM",
+    "end_time": "12:00 PM",
+    "location_en": "Auditorium A",
+    "location_ar": "المدرج أ",
+    "description_en": "Join us for an insightful talk on the advancements and future trends in Artificial Intelligence.",
+    "description_ar": "انضم إلينا في حديث ملهم حول التقدمات والاتجاهات المستقبلية في مجال الذكاء الاصطناعي."
+  },
+  {
+    "id": 2,
+    "title_en": "Lab Workshop: Cybersecurity Basics",
+    "title_ar": "ورشة عمل مختبر: أساسيات الأمن السيبراني",
+    "type_en": "Workshop",
+    "type_ar": "ورشة عمل",
+    "date": "2025-12-30",
+    "start_time": "11:00 AM",
+    "end_time": "01:00 PM",
+    "location_en": "Auditorium C",
+    "location_ar": "المدرج ج",
+    "description_en": "This workshop will cover the fundamental concepts of cybersecurity and best practices.",
+    "description_ar": "ستغطي هذه الورشة المفاهيم الأساسية للأمن السيبراني وأفضل الممارسات."
+  },
+  {
+    "id": 3,
+    "title_en": "Career Day: Meet Tech Companies",
+    "title_ar": "يوم التوظيف: لقاء مع شركات التقنية",
+    "type_en": "Career Fair",
+    "type_ar": "معرض وظائف",
+    "date": "2026-01-12",
+    "start_time": "09:00 AM",
+    "end_time": "02:00 PM",
+    "location_en": "Main Hall",
+    "location_ar": "القاعة الرئيسية",
+    "description_en": "Network with top tech companies and explore internship and job opportunities.",
+    "description_ar": "تواصل مع أفضل شركات التقنية واستكشف فرص التدريب والعمل."
+  },
+  {
+    "id": 4,
+    "title_en": "Hackathon: Build Your First App",
+    "title_ar": "هاكاثون: ابنِ تطبيقك الأول",
+    "type_en": "Hackathon",
+    "type_ar": "هاكاثون",
+    "date": "2026-01-25",
+    "start_time": "08:00 AM",
+    "end_time": "08:00 PM",
+    "location_en": "Innovation Lab",
+    "location_ar": "مختبر الابتكار",
+    "description_en": "A full-day hackathon where students team up to build innovative apps and compete for prizes.",
+    "description_ar": "هاكاثون كامل اليوم يجتمع فيه الطلاب لبناء تطبيقات مبتكرة والتنافس على الجوائز."
+  }
+]

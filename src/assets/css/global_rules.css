@@ -14,8 +14,10 @@
   --decoration-color-2: #feee91;
   --decoration-color-3: #ffa239;
   --decoration-color-4: #ff5656;
+  --decoration-color-5: #feffe6;
   --error-color: #ef5350;
   --success-color: #4caf50;
+  --pending-color: #ffda00;
   /* Font Sizes */
   --font-size-52: 52px;
   --font-size-40: 40px;

@@ -49,7 +49,8 @@ export async function login(code, password) {
           attendance_percentage: user.stats.attendance_percentage,
           fees_total: user.stats.fees_total,
           fees_paid: user.stats.fees_paid
-        }
+        },
+        allowe_credit_hours: user.allowed_credits,
       }
     },
   };

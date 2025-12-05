@@ -73,6 +73,7 @@
     "recent_messages_title": "أحدث الرسائل",
     "today_schedule_title": "جدول اليوم",
     "all_assignments_heading": "جميع الواجبات",
+    "all_events_heading": "جميع الفعاليات",
     "all_enrolled_courses_heading": "جميع المقررات المسجلة",
     "enroll_new_course_heading": "تسجيل مقرر جديد",
     "all_marks_heading": "جميع الدرجات",
@@ -108,14 +109,15 @@
     "attendence_percentage_text": "نسبة الحضور",
     "paid_money_text": "المدفوع",
     "num_of_enrolled_courses_text": "عدد المقررات المسجلة:",
-    "credit_hours_text": "الساعات المعتمدة:",
+    "total_credit_hours_text": "إجمالي الساعات المعتمدة:",
     "year_of_study_text": "السنة الدراسية:",
     "semester_text": "الفصل الدراسي:",
-    "total_fees_text": "إجمالي الرسوم:",
-    "paid_fees_text": "الرسوم المدفوعة:",
-    "due_fees_text": "الرسوم المتبقية:",
+    "total_fees_text": "إجمالي الرسوم",
+    "paid_fees_text": "الرسوم المدفوعة",
+    "due_fees_text": "الرسوم المتبقية",
     "empty_paragraph_text": "لا يوجد محتوي لعرضه!",
-    "view_message": "عرض الرسالة"
+    "view_message": "عرض الرسالة",
+    "no_lectures_text": "لا يوجد محاضرة في هذا الوقت!"
   },
   "buttons_and_links": {
     "access_dashboard_button": "الوصول إلى لوحة التحكم",
@@ -127,6 +129,9 @@
     "reset_password_button": "إعادة تعيين كلمة المرور",
     "view_all_link": "عرض الكل",
     "manage_all_tasks_link": "إدارة جميع المهام",
+    "add_new_task_button": "إنشاء",
+    "delete_button": "حذف",
+    "edit_button": "تعديل",
     "confirm_button": "تأكيد",
     "cancel_button": "إلغاء"
   },
@@ -170,7 +175,7 @@
     "otp_is_incorrect": "رمز التحقق غير صحيح!",
     "passwords_are_not_identical": "كلمتا المرور غير متطابقتين!",
     "password_changed_successfully": "تم تغيير كلمة المرور بنجاح!",
-    "empty_task": "لا يمكن إضافة مهمة فارغة!",
+    "cannot_create_empty_task": "لا يمكن إنشاء مهمة فارغة",
     "task_added_successfully": "تم إضافة المهمة بنجاح!",
     "must_login": "يجب تسجيل الدخول أولا للوصول للوحة التحكم الخاصة بك!",
     "already_loggedin": "لقد قمت بتسجيل الدخول بالفعل!",
@@ -191,6 +196,54 @@
       "instructor": "المُحاضِر",
       "due_date": "تاريخ التسليم",
       "status": "الحالة"
+    },
+    "events_table": {
+      "title": "العنوان",
+      "type": "النوع",
+      "date": "التاريخ",
+      "start_time": "وقت البدء",
+      "end_time": "وقت الانتهاء",
+      "location": "المكان"
+    },
+    "enrolled_courses_table": {
+      "course": "المادة",
+      "course_code": "كود المادة",
+      "instructor": "المُحاضِر",
+      "credits": "عدد ساعات المادة",
+      "attendance_percentage": "نسبة الحضور"
+    },
+    "all_available_courses_table": {
+      "selected": "تم تحديدها",
+      "course": "المادة",
+      "course_code": "كود المادة",
+      "instructor": "المُحاضِر",
+      "credits": "عدد ساعات المادة",
+      "attendance_percentage": "نسبة الحضور"
+    },
+    "marks_table": {
+      "course": "المادة",
+      "course_code": "كود المادة",
+      "credits": "عدد ساعات المادة",
+      "midterm": "الاختبار النصفي",
+      "final": "الاختبار النهائي",
+      "total": "المجموع",
+      "grade": "التقدير",
+      "status": "الحالة"
+    },
+    "last_transactions_table": {
+      "title": "العنوان",
+      "date": "التاريخ",
+      "amount": "المبلغ",
+      "method": "الطريقة"
     }
+  },
+  "days_of_week": {
+    "saturday": "السبت",
+    "sunday": "الأحد",
+    "monday": "الإثنين",
+    "tuesday": "الثلاثاء",
+    "wednesday": "الأربعاء",
+    "thursday": "الخميس",
+    "friday": "الجمعة"
   }
 }

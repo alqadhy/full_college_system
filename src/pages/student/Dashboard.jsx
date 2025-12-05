@@ -4,20 +4,24 @@ import "../../assets/css/pages/stu_dashboard.css";
 // HOOKS
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import usePageTitle from "../../hooks/usePageTitle";
+import useRedirect from "../../hooks/useRedirect";
 
-// UTILS FUNCTIONS
-import { setPageTitle, showToastNotification } from "../../utils";
+// REACT ROUTER
+import { Link } from "react-router-dom";
 
 // CONTEXTS
 import { langContext } from "../../contexts/languageContext";
 import { userDataContext } from "../../contexts/userDataContext";
+import { userTasksContext } from "../../contexts/userTasks";
 
 // COMPONENTS
 import PageLoader from './../../components/PageLoader';
 import Sidebar from "../../components/Sidebar";
 import Widget from "../../components/Widget";
+import FeesProgressBar from "../../components/FeesProgressBar";
 import RowBox from "../../components/RowBox";
+import TaskBox from "../../components/TaskBox";
 import MessageBox from "../../components/MessageBox";
 import TodayLecturesTable from "../../components/TodayLecturesTable";
 
@@ -33,19 +37,16 @@ import { GrAnnounce } from "react-icons/gr";
 // PIE CHART COMPONENT
 import { PieChart } from "react-minimal-pie-chart";
 
-// LINEAR PROGRESSBAR COMPONENT
-import LinearProgress from '@mui/material/LinearProgress';
-
 function Dashboard() {
   const { t } = useTranslation();
   const { lang } = useContext(langContext);
   const { userData } = useContext(userDataContext);
-  const navigateTo = useNavigate();
+  const { userTasks } = useContext(userTasksContext);
   const [stuStats, setStuStats] = useState(null);
   const [requiredAssignments, setRequiredAssignments] = useState([]);
   const [upcomingEvents, setUpcomingEvents] = useState([]);
-  const [todayTasks, setTodayTasks] = useState([]);
   const [recentMessages, setRecentMessages] = useState([]);
+  const [stuSchedule, setStuSchedule] = useState({});
 
   // Student Pages 
   const userAccessPagesArr = [
@@ -66,18 +67,18 @@ function Dashboard() {
   // Quick Access Btns Pages IDs
   const quickAccessBtnsArr = [3, 8, 9, 6];
 
-  // SET PAGE TITLE
-  useEffect(() => {
-    setPageTitle(t("university_data.short_name") + " - " + t("pages.dashboard"));
-  }, [lang]);
+  // Today's Name
+  const todayName = new Date().toLocaleDateString("en-US", { weekday: "long" }).toLowerCase();
 
-  // Redirect to the dashboard if the user is not logged in
-  useEffect(() => {
-    if (!userData) {
-      navigateTo("/login");
-      showToastNotification("error", t("alerts.must_login"));
-    }
-  }, []);
+  // SET PAGE TITLE
+  usePageTitle(t("pages.dashboard"));
+
+  // Redirect to the login page if the student is not logged in!
+  useRedirect({
+    isAuthorized: userData,
+    errorMsg: t("alerts.must_login"),
+    redirectionRoute: "/login",
+  });
 
   // Fetch Required Data
   useEffect(() => {
@@ -100,12 +101,14 @@ function Dashboard() {
     fetch("/data/recent_messages.json")
       .then(res => res.json())
       .then(data => setRecentMessages(data));
+
+    // Student Schedule
+    fetch("/data/stu_weekly_schedule.json")
+      .then(res => res.json())
+      .then(data => setStuSchedule(data));
   }, []);
 
-  // Progressbar Percentage
-  const progressPercentage = stuStats ? Math.round((stuStats.fees_paid / stuStats.fees_total) * 100) : 0;
-
-  if (userData && stuStats)
+  if (userData && stuStats && stuSchedule[todayName])
     return (
       <main className="stu-dashboard-page dashboard-page">
         <Sidebar userAccessPagesArr={userAccessPagesArr} />
@@ -175,24 +178,7 @@ function Dashboard() {
               </div>
               <div className="box">
                 <h4 className="bold-title">{t("text.paid_money_text")}</h4>
-                <div className="progress-bar" style={{ marginTop: "30px", "--percentage": `${progressPercentage}%` }} datavalue={`${progressPercentage}%`}>
-                  <LinearProgress
-                    variant="determinate"
-                    value={(stuStats.fees_paid / stuStats.fees_total) * 100}
-                    sx={{
-                      height: 12,
-                      borderRadius: 8,
-                      backgroundColor: "#eee",
-                      transform: lang == "ar" ? "scaleX(-1)" : null,
-                      "& .MuiLinearProgress-bar": {
-                        backgroundColor: t("main_style_colors.primary_color"),
-                      },
-                    }}
-                  />
-                  <p className="total-fees-txt">
-                    {t("text.total_fees_text")} {t("university_data.used_currency")} {stuStats.fees_total}
-                  </p>
-                </div>
+                <FeesProgressBar paid_amount={stuStats.paid_amount} total_fees={stuStats.fees_total} />
               </div>
               <div className="box">
                 <h4 className="bold-title">{t("text.student_attributes_text.gpa")}: {stuStats.gpa}</h4>
@@ -231,9 +217,14 @@ function Dashboard() {
             </div>
           </Widget>
 
-          <Widget rowsNum={2} colsNum={2} title={t("headings_and_titles.today_tasks_title")} showEmptyParagrah={todayTasks.length == 0} showViewAllLink={todayTasks.length != 0}
-            viewAllLinkTxt={t("buttons_and_links.manage_all_tasks_link")} viewAllLinkPath="/student/tasks">
-            <div className="grid-gap"></div>
+          <Widget rowsNum={2} colsNum={2} title={t("headings_and_titles.today_tasks_title")} showEmptyParagrah={userTasks.length == 0} showViewAllLink={userTasks.length != 0}
+            viewAllLinkTxt={t("buttons_and_links.manage_all_tasks_link")} viewAllLinkPath="/student/todo-list">
+            <div className="grid-gap">
+              {
+                userTasks.length != 0 &&
+                userTasks.map(task => <TaskBox key={task.id} taskObj={task} />)
+              }
+            </div>
           </Widget>
 
           <Widget colsNum={1} title={t("headings_and_titles.recent_messages_title")} showEmptyParagrah={recentMessages.length == 0} showViewAllLink={recentMessages.length != 0}
@@ -252,7 +243,7 @@ function Dashboard() {
             </div>
           </Widget>
 
-          <TodayLecturesTable />
+          <TodayLecturesTable stuSchedule={stuSchedule} todayName={todayName} />
         </section>
       </main>
     );

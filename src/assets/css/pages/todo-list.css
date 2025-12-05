@@ -1,0 +1,27 @@
+/* Start Add New Task Field */
+.add-new-task-field {
+  position: relative;
+}
+
+.add-new-task-field input {
+  display: block;
+  width: 100%;
+  padding: var(--pad-20);
+  border: var(--light-border);
+  border-radius: var(--border-radius-8);
+  caret-color: var(--primary-color);
+  transition: border-color var(--transition-normal);
+}
+
+.add-new-task-field input:focus {
+  border-color: var(--primary-color);
+}
+
+.add-new-task-field .main-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* End Add New Task Field */

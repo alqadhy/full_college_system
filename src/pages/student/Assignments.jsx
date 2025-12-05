@@ -1,15 +1,14 @@
 // COMPONENTS
 import PageLoader from "../../components/PageLoader";
 import Sidebar from "../../components/Sidebar";
-import MainHeading from "../../components/MainHeading";
-import SearchBar from "../../components/SearchBar";
-import SortBar from "../../components/SortBar";
+import PageMainHeading from "../../components/PageMainHeading";
 import MainTable from "../../components/MainTable";
 
 // HOOKS
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import usePageTitle from "../../hooks/usePageTitle";
+import useRedirect from "../../hooks/useRedirect";
 
 // ICONS
 import { FaFileAlt } from "react-icons/fa";
@@ -18,9 +17,6 @@ import { FaFileAlt } from "react-icons/fa";
 import { langContext } from "../../contexts/languageContext";
 import { userDataContext } from './../../contexts/userDataContext';
 
-// UTILS FUNCTIONS
-import { setPageTitle, showToastNotification } from "../../utils";
-
 function Assignments() {
   const { t } = useTranslation();
   const [allAssignments, setAllAssignments] = useState([]);
@@ -28,20 +24,16 @@ function Assignments() {
   const [sortValue, setSortValue] = useState("");
   const { lang } = useContext(langContext);
   const { userData } = useContext(userDataContext);
-  const navigateTo = useNavigate();
 
   // SET PAGE TITLE
-  useEffect(() => {
-    setPageTitle(t("university_data.short_name") + " - " + t("pages.assignments"));
-  }, [lang]);
+  usePageTitle(t("pages.assignments"));
 
-  // Redirect to the dashboard if the user is not logged in
-  useEffect(() => {
-    if (!userData) {
-      navigateTo("/login");
-      showToastNotification("error", t("alerts.must_login"));
-    }
-  }, []);
+  // Redirect to the login page if the student is not logged in!
+  useRedirect({
+    isAuthorized: userData,
+    errorMsg: t("alerts.must_login"),
+    redirectionRoute: "/login",
+  });
 
   // Fetch All Student's Assignments
   useEffect(() => {
@@ -54,19 +46,15 @@ function Assignments() {
   const optionsArr = new Set([lang == "en" ? "All Subjects" : "كل المواد", ...allAssignments.map(assignment => lang == "en" ? assignment.subject_en : assignment.subject_ar)]);
   const tableAttributesArr = t("tables_attributes.assignments_table", { returnObjects: true });
 
-  if (allAssignments)
+  if (userData && allAssignments)
     return (
       <main className="dashboard-page">
         <Sidebar />
 
         <section className="side-container">
-          <div className="main-heading-wrapper flex-space-between">
-            <MainHeading title={t("headings_and_titles.all_assignments_heading")} />
-            <div className="flex-wrapper" style={{ flexWrap: "wrap" }}>
-              <SearchBar value={searchValue} setSearchValueFn={setSearchValue} />
-              <SortBar optionsArr={optionsArr} value={sortValue} setSortValueFn={setSortValue} />
-            </div>
-          </div>
+          <PageMainHeading pageTitle={t("headings_and_titles.all_assignments_heading")}
+            searchValue={searchValue} setSearchValue={setSearchValue}
+            optionsArr={optionsArr} sortValue={sortValue} setSortValue={setSortValue} />
 
           <MainTable attributesArr={tableAttributesArr}>
             {
@@ -89,7 +77,11 @@ function Assignments() {
                       <td>{assignment.subject_code}</td>
                       <td>{lang == "en" ? assignment.instructor_en : assignment.instructor_ar}</td>
                       <td>{assignment.due_date}</td>
-                      <td><span className="status">{lang == "en" ? assignment.status_en : assignment.status_ar}</span></td>
+                      <td>
+                        <span className={assignment.status_en == "Done" ? "status success" : "status pending"}>
+                          {lang == "en" ? assignment.status_en : assignment.status_ar}
+                        </span>
+                      </td>
                     </tr>
                   );
                 })

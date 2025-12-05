@@ -596,6 +596,56 @@ footer .bottom {
 }
 
 /* End Widget */
+/* Start Progress Bar */
+.progress-bar {
+  position: relative;
+}
+
+.progress-bar::before,
+.progress-bar::after {
+  position: absolute;
+  left: var(--percentage);
+  transform: translate(-50%, -60%);
+  z-index: var(--z-index-2);
+  /* HIDE */
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-normal);
+}
+
+.progress-bar:hover::before,
+.progress-bar:hover::after {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -100%);
+}
+
+.progress-bar::before {
+  content: attr(datavalue);
+  background-color: var(--black-color);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-4);
+  color: var(--white-color);
+  font-size: var(--font-size-14);
+  font-weight: bold;
+  top: -10px;
+}
+
+.progress-bar::after {
+  content: "";
+  border: 7px solid transparent;
+  border-top-color: var(--black-color);
+  top: 3px;
+}
+
+.progress-bar .total-fees-txt {
+  color: var(--gray-color);
+  text-align: right;
+  font-size: var(--font-size-12);
+  margin-top: 10px;
+}
+
+/* End Progress Bar */
 /* Start Popup */
 .swal2-container {
   z-index: var(--popups-z-index);
@@ -712,6 +762,10 @@ footer .bottom {
   overflow-x: auto;
 }
 
+.is-grid .responsive-table {
+  grid-column-end: span 3;
+}
+
 .responsive-table .sub-title {
   position: sticky;
   left: 0;
@@ -799,6 +853,11 @@ footer .bottom {
   margin-bottom: 60px;
 }
 
+.is-grid .main-heading-wrapper {
+  grid-column-end: span 3;
+  margin-bottom: 40px;
+}
+
 .main-heading-wrapper .main-heading {
   margin-bottom: 0;
 }
@@ -810,13 +869,14 @@ footer .bottom {
 }
 
 .main-table tr:nth-child(even) {
-  background-color: var(--decoration-color-1);
+  background-color: var(--decoration-color-5);
 }
 
 .main-table tbody td {
-  min-width: 240px;
+  min-width: 350px;
   border: none;
   padding: 20px;
+  border-right: var(--light-border);
   font-size: var(--font-size-15);
   text-align: center;
 }
@@ -832,13 +892,30 @@ footer .bottom {
   color: var(--primary-color);
 }
 
+.main-table tbody td .bold {
+  color: var(--primary-color);
+  font-size: var(--font-size-16);
+  font-weight: bold;
+}
+
 .main-table tbody td .status {
-  background-color: var(--decoration-color-2);
   padding: 6px 15px;
   border-radius: 30px;
-  color: var(--gray-color);
+  color: var(--white-color);
   font-size: var(--font-size-14);
   font-weight: bold;
+}
+
+.main-table tbody td .status.success {
+  background-color: var(--success-color);
+}
+
+.main-table tbody td .pending.pending {
+  background-color: var(--pending-color);
+}
+
+.main-table tbody td .pending.error {
+  background-color: var(--error-color);
 }
 
 .main-table .empty-paragraph {
@@ -846,3 +923,119 @@ footer .bottom {
 }
 
 /* End Main Table */
+/* Start Weekly Schedule Table */
+.weekly-schedule {
+  border-top: var(--light-border);
+  border-spacing: 0;
+}
+
+.weekly-schedule td {
+  border-bottom: var(--light-border);
+}
+
+.weekly-schedule td:first-child {
+  background-color: var(--primary-color);
+  min-width: 150px;
+  height: 150px;
+  color: var(--white-color);
+  text-align: center;
+  font-size: var(--font-size-16);
+  font-weight: bold;
+}
+
+.weekly-schedule td:not(:first-child) {
+  min-width: 300px;
+  padding: var(--pad-30);
+  border-right: var(--light-border);
+}
+
+.weekly-schedule td .lec-box {
+  background-color: var(--decoration-color-1);
+  padding: var(--pad-20);
+  border-radius: var(--border-radius-6);
+}
+
+.weekly-schedule td .lec-box .time {
+  color: var(--primary-color);
+  text-align: right;
+  font-size: var(--font-size-14);
+}
+
+.weekly-schedule td .lec-box h4 {
+  margin-top: 10px;
+  color: var(--white-color);
+}
+
+.weekly-schedule td .no-lec-txt {
+  color: var(--error-color);
+  text-align: center;
+}
+
+/* End Weekly Schedule Table */
+/* Start Task Box */
+.task-box {
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.task-box.deleted {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(50px);
+}
+
+.task-box p {
+  flex-grow: 1;
+  transition: all var(--transition-normal);
+}
+
+.task-box.done p {
+  color: var(--gray-color);
+  text-decoration: line-through;
+}
+
+.task-box .options-list {
+  background-color: var(--white-color);
+  border: var(--light-border);
+  border-radius: var(--border-radius-4);
+  position: absolute;
+  right: 30px;
+  top: 100%;
+  z-index: var(--z-index-2);
+  /* HIDE */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0);
+  transition: var(--transition-normal);
+}
+
+.task-box .options-list.opened {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-20px);
+}
+
+.task-box .options-list button {
+  width: 100px;
+  padding: 10px;
+  font-size: var(--font-size-14);
+  transition: all var(--transition-normal);
+}
+
+.task-box .options-list .edit-btn {
+  border-bottom: var(--light-border);
+}
+
+.task-box .options-list button:hover {
+  background-color: var(--background-color);
+}
+
+.task-box .options-list .edit-btn:hover {
+  color: var(--decoration-color-3);
+}
+
+.task-box .options-list .delete-btn:hover {
+  color: var(--error-color);
+}
+
+/* End Task Box */

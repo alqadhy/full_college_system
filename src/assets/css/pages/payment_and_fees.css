@@ -1,0 +1,52 @@
+/* Start Fees Box */
+.fees-box {
+  border: var(--light-border);
+  display: flex;
+}
+
+.fees-box .icon-container {
+  width: 75px;
+  height: 75px;
+  color: var(--white-color);
+  font-size: var(--font-size-18);
+}
+
+.fees-box:first-child .icon-container {
+  background-color: var(--primary-color);
+}
+
+.fees-box:nth-child(2) .icon-container {
+  background-color: var(--success-color);
+}
+
+.fees-box:last-child .icon-container {
+  background-color: var(--error-color);
+}
+
+.fees-box .text {
+  width: calc(100% - 75px);
+  padding: 10px;
+}
+
+.fees-box .text h4 {
+  margin-bottom: 6px;
+}
+
+.fees-box:first-child .text h4 {
+  color: var(--primary-color);
+}
+
+.fees-box:nth-child(2) .text h4 {
+  color: var(--success-color);
+}
+
+.fees-box:last-child .text h4 {
+  color: var(--error-color);
+}
+
+.fees-box .text p {
+  color: var(--gray-color);
+  font-size: var(--font-size-14);
+}
+
+/* End Fees Box */

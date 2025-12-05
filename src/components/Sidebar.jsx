@@ -41,12 +41,12 @@ function Sidebar() {
     { id: 2, icon: <MdDashboard className="icon" />, title: t("pages.dashboard"), path: "/student/dashboard" },
     { id: 3, icon: <FaFileAlt className="icon" />, title: t("pages.assignments"), path: "/student/assignments" },
     { id: 4, icon: <MdEvent className="icon" />, title: t("pages.events"), path: "/student/events" },
-    { id: 5, icon: <IoSchool className="icon" />, title: t("pages.enrolled_courses"), path: "/student/enrolled_courses" },
-    { id: 6, icon: <GiArchiveRegister className="icon" />, title: t("pages.enroll_new_course"), path: "/student/enroll_new_course" },
+    { id: 5, icon: <IoSchool className="icon" />, title: t("pages.enrolled_courses"), path: "/student/enrolled-courses" },
+    { id: 6, icon: <GiArchiveRegister className="icon" />, title: t("pages.enroll_new_course"), path: "/student/enroll-new-course" },
     { id: 7, icon: <TbCircleLetterA className="icon" />, title: t("pages.marks"), path: "/student/marks" },
-    { id: 8, icon: <AiFillSchedule className="icon" />, title: t("pages.weekly_schedule"), path: "/student/weekly_schedule" },
-    { id: 9, icon: <FaMoneyBillAlt className="icon" />, title: t("pages.payments_and_fees"), path: "/student/payments_and_fees" },
-    { id: 10, icon: <FaTasks className="icon" />, title: t("pages.to_do_list"), path: "/student/to_do_list" },
+    { id: 8, icon: <AiFillSchedule className="icon" />, title: t("pages.weekly_schedule"), path: "/student/weekly-schedule" },
+    { id: 9, icon: <FaMoneyBillAlt className="icon" />, title: t("pages.payments_and_fees"), path: "/student/payments-and-fees" },
+    { id: 10, icon: <FaTasks className="icon" />, title: t("pages.to_do_list"), path: "/student/todo-list" },
     { id: 11, icon: <AiOutlineMessage className="icon" />, title: t("pages.messages"), path: "/student/messages" },
     { id: 12, icon: <GrAnnounce className="icon" />, title: t("pages.announcements"), path: "/student/announcements" },
   ];
@@ -59,7 +59,7 @@ function Sidebar() {
       // Update the User Data To Be Empty (null)
       setUserData(null);
       // Show A Success Toast Notification
-      showToastNotification("success", t("alerts.logout_successfully"), lang == "ar" ? "top-left" : "top-right", 2500);
+      showToastNotification("success", t("alerts.logout_successfully"), lang);
       // Navigate To The Home Page
       navigateTo("/");
     }

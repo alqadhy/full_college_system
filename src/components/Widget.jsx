@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // COMPONENTS
 import EmptyParagraph from './EmptyParagraph';
 
-function Widget({ rowsNum = 1, colsNum, title, showEmptyParagrah = false,
+function Widget({ rowsNum = 1, colsNum = 1, title, showEmptyParagrah = false,
   showViewAllLink = false, viewAllLinkTxt = "", viewAllLinkPath = null, children }) {
 
   return (

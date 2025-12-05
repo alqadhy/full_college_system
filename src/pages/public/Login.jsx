@@ -3,9 +3,11 @@ import "../../assets/css/pages/login.css";
 
 // HOOKS
 import { useTranslation } from "react-i18next";
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { useNavigate } from "react-router-dom";
+import usePageTitle from "../../hooks/usePageTitle";
+import useRedirect from "../../hooks/useRedirect";
 
 // COMPONENTS
 import MainHeading from "../../components/MainHeading";
@@ -16,7 +18,7 @@ import { langContext } from "../../contexts/languageContext";
 import { userDataContext } from "../../contexts/userDataContext";
 
 // UTILS FUNCTIONS
-import { setPageTitle, isEmpty, showToastNotification } from "../../utils";
+import { isEmpty, showToastNotification } from "../../utils";
 import { login } from "../../services/authMock";
 
 // REACT ROUTER
@@ -30,22 +32,15 @@ function Login() {
   const navigateTo = useNavigate();
   const { userData, setUserData } = useContext(userDataContext);
 
-  // Toast Settings
-  const position = lang == "ar" ? "top-left" : "top-right";
-  const duration = 2500;
-
   // SET PAGE TITLE
-  useEffect(() => {
-    setPageTitle(t("university_data.short_name") + " - " + t("pages.login"));
-  }, [lang]);
+  usePageTitle(t("pages.login"));
 
   // Redirect to the dashboard if the user is already loggedin
-  useEffect(() => {
-    if (userData) {
-      navigateTo(`/${userData.role_en}/dashboard`);
-      showToastNotification("error", t("alerts.already_loggedin"), position, duration);
-    }
-  }, []);
+  useRedirect({
+    isAuthorized: !userData,
+    errorMsg: t("alerts.already_loggedin"),
+    redirectionRoute: userData ? `/${userData.role_en}/dashboard` : "",
+  });
 
   async function handleFormSubmit(e) {
     // Prevent the default submation behaviour
@@ -53,11 +48,11 @@ function Login() {
 
     // Validate Inputs
     if (isEmpty(loginData.code.trim())) {
-      showToastNotification("error", t("alerts.code_is_empty"), position, duration);
+      showToastNotification("error", t("alerts.code_is_empty"), lang);
       return;
     }
     if (isEmpty(loginData.password.trim())) {
-      showToastNotification("error", t("alerts.password_is_empty"), position, duration);
+      showToastNotification("error", t("alerts.password_is_empty"), lang);
       return;
     }
 
@@ -65,11 +60,11 @@ function Login() {
     const response = await login(loginData.code, loginData.password);
 
     if (!response.success) {
-      showToastNotification("error", t("alerts.code_or_password_is_wrong"), position, duration);
+      showToastNotification("error", t("alerts.code_or_password_is_wrong"), lang);
       return;
     }
 
-    showToastNotification("success", t("alerts.login_successfully"), position, duration);
+    showToastNotification("success", t("alerts.login_successfully"), lang);
 
     setItem("token", response.data.token);
     setItem("user_data", response.data.user);

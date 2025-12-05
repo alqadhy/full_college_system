@@ -25,10 +25,10 @@ export function isEmpty(value) {
   return value.length == 0;
 }
 
-export function showToastNotification(type, content, position, duration, hideProgressBar = false, pauseOnHover = true) {
+export function showToastNotification(type, content, lang, hideProgressBar = false, pauseOnHover = true) {
   const settingsObj = {
-    position: position,
-    autoClose: duration,
+    position: lang == "en" ? "top-right" : "top-left",
+    autoClose: 2500,
     hideProgressBar: hideProgressBar,
     pauseOnHover: pauseOnHover,
   };

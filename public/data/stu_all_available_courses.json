@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "course_code": "CS201",
+    "course_name_en": "Object-Oriented Programming",
+    "course_name_ar": "البرمجة كائنية التوجه",
+    "instructor_en": "Dr. Sara Ali",
+    "instructor_ar": "د. سارة علي",
+    "credit_hours": 30,
+    "attendance_percentage": 85,
+    "semester": "Fall 2025",
+    "is_selected": true
+  },
+  {
+    "id": 2,
+    "course_code": "CS202",
+    "course_name_en": "Algorithms",
+    "course_name_ar": "الخوارزميات",
+    "instructor_en": "Dr. Amr Nasser",
+    "instructor_ar": "د. عمرو ناصر",
+    "credit_hours": 30,
+    "attendance_percentage": 90,
+    "semester": "Fall 2025",
+    "is_selected": true
+  },
+  {
+    "id": 3,
+    "course_code": "CS203",
+    "course_name_en": "Data Structures",
+    "course_name_ar": "هياكل البيانات",
+    "instructor_en": "Dr. Mohammed Ramadan",
+    "instructor_ar": "د. محمد رمضان",
+    "credit_hours": 30,
+    "attendance_percentage": 62,
+    "semester": "Fall 2025",
+    "is_selected": true
+  },
+  {
+    "id": 4,
+    "course_code": "CS204",
+    "course_name_en": "Data Bases",
+    "course_name_ar": "قواعد البيانات",
+    "instructor_en": "Dr. Amr Nasser",
+    "instructor_ar": "د. عمرو ناصر",
+    "credit_hours": 30,
+    "attendance_percentage": 73,
+    "semester": "Fall 2025",
+    "is_selected": true
+  },
+  {
+    "id": 5,
+    "course_code": "CS205",
+    "course_name_en": "Web Development",
+    "course_name_ar": "تطوير الويب",
+    "instructor_en": "Dr. Rania Samir",
+    "instructor_ar": "د. رانيا سمير",
+    "credit_hours": 30,
+    "attendance_percentage": 88,
+    "semester": "Fall 2025",
+    "is_selected": true
+  },
+  {
+    "id": 6,
+    "course_code": "CS206",
+    "course_name_en": "Mobile App Development",
+    "course_name_ar": "تطوير تطبيقات الجوال",
+    "instructor_en": "Dr. Ahmed Hassan",
+    "instructor_ar": "د. أحمد حسن",
+    "credit_hours": 30,
+    "attendance_percentage": 0,
+    "semester": "Fall 2025",
+    "is_selected": false
+  },
+  {
+    "id": 7,
+    "course_code": "CS207",
+    "course_name_en": "Operating Systems",
+    "course_name_ar": "أنظمة التشغيل",
+    "instructor_en": "Dr. Mosa Ayman",
+    "instructor_ar": "د. موسى أيمن",
+    "credit_hours": 30,
+    "attendance_percentage": 0,
+    "semester": "Fall 2025",
+    "is_selected": false
+  },
+  {
+    "id": 8,
+    "course_code": "CS208",
+    "course_name_en": "Networking",
+    "course_name_ar": "الشبكات",
+    "instructor_en": "Dr. Ahmed Saad",
+    "instructor_ar": "د. أحمد سعد",
+    "credit_hours": 30,
+    "attendance_percentage": 0,
+    "semester": "Fall 2025",
+    "is_selected": false
+  }
+]

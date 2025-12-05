@@ -9,22 +9,13 @@ import CallToAction from "../../components/HomePageSections/CallToAction";
 
 // HOOKS
 import { useTranslation } from "react-i18next";
-import { useEffect, useContext } from "react";
-
-// UTILS FUNCTIONS
-import { setPageTitle } from "../../utils";
-
-// CONTEXTS
-import { langContext } from "../../contexts/languageContext";
+import usePageTitle from "../../hooks/usePageTitle";
 
 function Home() {
   const { t } = useTranslation();
-  const { lang } = useContext(langContext);
 
-  useEffect(() => {
-    // SET PAGE TITLE
-    setPageTitle(t("university_data.short_name") + " - " + t("pages.home"));
-  }, [lang]);
+  // SET PAGE TITLE
+  usePageTitle(t("pages.home"));
 
   return (
     <>

@@ -73,6 +73,7 @@
     "recent_messages_title": "Recent Messages",
     "today_schedule_title": "Today's Schedule",
     "all_assignments_heading": "All Assignments",
+    "all_events_heading": "All Events",
     "all_enrolled_courses_heading": "All Enrolled Courses",
     "enroll_new_course_heading": "Enroll in a New Course",
     "all_marks_heading": "All Marks",
@@ -108,14 +109,15 @@
     "attendence_percentage_text": "Attendance Percentage",
     "paid_money_text": "Paid Money",
     "num_of_enrolled_courses_text": "Number of Enrolled Courses:",
-    "credit_hours_text": "Credit Hours:",
+    "total_credit_hours_text": "Total Credit Hours:",
     "year_of_study_text": "Year of Study:",
     "semester_text": "Semester:",
-    "total_fees_text": "Total Fees:",
-    "paid_fees_text": "Paid Fees:",
-    "due_fees_text": "Due Fees:",
+    "total_fees_text": "Total Fees",
+    "paid_fees_text": "Paid Fees",
+    "due_fees_text": "Due Fees",
     "empty_paragraph_text": "No content to show!",
-    "view_message": "View Message"
+    "view_message": "View Message",
+    "no_lectures_text": "No lecture at this time!"
   },
   "buttons_and_links": {
     "access_dashboard_button": "Access Your Dashboard",
@@ -127,6 +129,9 @@
     "reset_password_button": "Reset Password",
     "view_all_link": "View All",
     "manage_all_tasks_link": "Manage All Tasks",
+    "add_new_task_button": "ADD",
+    "delete_button": "Delete",
+    "edit_button": "Edit",
     "confirm_button": "Confirm",
     "cancel_button": "Cancel"
   },
@@ -170,7 +175,7 @@
     "otp_is_incorrect": "Wrong OTP!",
     "passwords_are_not_identical": "Password are not identical!",
     "password_changed_successfully": "Password changed successfully!",
-    "empty_task": "Cannot add empty task!",
+    "cannot_create_empty_task": "Cannot create empty task!",
     "task_added_successfully": "Task added successfully!",
     "must_login": "You must login to access your dashboard!",
     "already_loggedin": "You have already loggedin!",
@@ -191,6 +196,54 @@
       "instructor": "Instructor",
       "due_date": "Due Date",
       "status": "Status"
+    },
+    "events_table": {
+      "title": "Title",
+      "type": "Type",
+      "date": "Date",
+      "start_time": "Start Time",
+      "end_time": "End Time",
+      "location": "Location"
+    },
+    "enrolled_courses_table": {
+      "course": "Course",
+      "course_code": "Course Code",
+      "instructor": "Instructor",
+      "credits": "Credits",
+      "attendance_percentage": "Attendance Percentage"
+    },
+    "all_available_courses_table": {
+      "selected": "Selected",
+      "course": "Course",
+      "course_code": "Course Code",
+      "instructor": "Instructor",
+      "credits": "Credits",
+      "attendance_percentage": "Attendance Percentage"
+    },
+    "marks_table": {
+      "course": "Course",
+      "course_code": "Course Code",
+      "credit_hours": "Credits",
+      "midterm": "Midterm",
+      "final": "Final",
+      "total": "Total",
+      "grade": "Grade",
+      "status": "Status"
+    },
+    "last_transactions_table": {
+      "title": "Title",
+      "date": "Date",
+      "amount": "Amount",
+      "method": "Method"
     }
+  },
+  "days_of_week": {
+    "saturday": "Satureday",
+    "sunday": "Sunday",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday"
   }
 }

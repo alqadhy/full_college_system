@@ -1,9 +1,10 @@
 // COMPONENTS
 import EmptyParagraph from "./EmptyParagraph";
 
-function MainTable({ attributesArr, children }) {
+function MainTable({ attributesArr, subTitle = null, children }) {
   return (
     <div className="responsive-table">
+      {subTitle}
       <table className="main-table">
         {/* Table Header */}
         <thead>
@@ -15,7 +16,7 @@ function MainTable({ attributesArr, children }) {
         </thead>
         {/* Table Body */}
         {
-          children.length != 0
+          children && children.length != 0
             ? <tbody>{children}</tbody>
             : <EmptyParagraph />
         }

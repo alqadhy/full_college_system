@@ -22,6 +22,13 @@ const Login = lazy(() => import("./pages/public/Login.jsx"));
 const NotFound = lazy(() => import("./pages/public/NotFound.jsx"));
 const StudentDashboard = lazy(() => import("./pages/student/Dashboard.jsx"));
 const StudentAssignments = lazy(() => import("./pages/student/Assignments.jsx"));
+const StudentEvents = lazy(() => import("./pages/student/Events.jsx"));
+const StudentEnrolledCourses = lazy(() => import("./pages/student/EnrolledCourses.jsx"));
+const StudentEnrollNewCourse = lazy(() => import("./pages/student/EnrollNewCourse.jsx"));
+const StudentMarks = lazy(() => import("./pages/student/Marks.jsx"));
+const StudentWeeklySchedule = lazy(() => import("./pages/student/WeeklySchedule.jsx"));
+const StudentPaymentsAndFees = lazy(() => import("./pages/student/PaymentsAndFees.jsx"));
+const StudentTodoList = lazy(() => import("./pages/student/TodoList.jsx"));
 
 // HOOKS
 import { useEffect, useState } from "react";
@@ -35,6 +42,7 @@ import { setThemeColors, setWebsiteFavicon, changePageDirection } from "./utils/
 import { langContext } from "./contexts/languageContext";
 import { userDataContext } from "./contexts/userDataContext";
 import { sidebarContext } from './contexts/sidebarContext';
+import { userTasksContext } from './contexts/userTasks';
 
 // REACT TOASTIFY
 import 'react-toastify/dist/ReactToastify.css';
@@ -46,6 +54,7 @@ function App() {
   const [lang, setLang] = useState(getItem("lang") || "en");
   const [userData, setUserData] = useState(getItem("user_data"));
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [userTasks, setUserTasks] = useState(getItem("user_tasks") || []);
 
   useEffect(() => {
     // DYNAMIC THEME COLORS
@@ -62,17 +71,26 @@ function App() {
         <langContext.Provider value={{ lang: lang, setLang: setLang }}>
           <userDataContext.Provider value={{ userData: userData, setUserData: setUserData }}>
             <sidebarContext.Provider value={{ isSidebarOpen: isSidebarOpen, setIsSidebarOpen: setIsSidebarOpen }}>
-              <Header />
-              <Routes>
-                {/* Public Pages */}
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="*" element={<NotFound />} />
+              <userTasksContext.Provider value={{ userTasks: userTasks, setUserTasks: setUserTasks }}>
+                <Header />
+                <Routes>
+                  {/* Public Pages */}
+                  <Route path="/" element={<Home />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="*" element={<NotFound />} />
 
-                {/* student Pages */}
-                <Route path="/student/dashboard" element={<StudentDashboard />} />
-                <Route path="/student/assignments" element={<StudentAssignments />} />
-              </Routes>
+                  {/* student Pages */}
+                  <Route path="/student/dashboard" element={<StudentDashboard />} />
+                  <Route path="/student/assignments" element={<StudentAssignments />} />
+                  <Route path="/student/events" element={<StudentEvents />} />
+                  <Route path="/student/enrolled-courses" element={<StudentEnrolledCourses />} />
+                  <Route path="/student/enroll-new-course" element={<StudentEnrollNewCourse />} />
+                  <Route path="/student/marks" element={<StudentMarks />} />
+                  <Route path="/student/weekly-schedule" element={<StudentWeeklySchedule />} />
+                  <Route path="/student/payments-and-fees" element={<StudentPaymentsAndFees />} />
+                  <Route path="/student/todo-list" element={<StudentTodoList />} />
+                </Routes>
+              </userTasksContext.Provider>
             </sidebarContext.Provider>
             <Footer />
           </userDataContext.Provider>

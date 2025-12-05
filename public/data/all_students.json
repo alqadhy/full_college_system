@@ -21,7 +21,8 @@
       "attendance_percentage": 82,
       "fees_total": 16400,
       "fees_paid": 6000
-    }
+    },
+    "allowed_credits": 150
   },
   {
     "id": 2,
@@ -45,6 +46,32 @@
       "attendance_percentage": 63,
       "fees_total": 23000,
       "fees_paid": 12000
-    }
+    },
+    "allowed_credits": 150
+  },
+  {
+    "id": 3,
+    "code": "CS2023003",
+    "role_en": "student",
+    "role_ar": "طالب",
+    "name_en": "Abdelrahman Alqadhy",
+    "name_ar": "عبدالرحمن القاضي",
+    "email": "abdelrahmankhalidarafat@gmail.com",
+    "phone": "01032611882",
+    "password": "abdo1234",
+    "address_en": "El Dokki, Giza",
+    "address_ar": "الدقي، الجيزة",
+    "department_en": "Computer Science",
+    "department_ar": "علوم الحاسب",
+    "image": "https://avatars.githubusercontent.com/u/193224827?v=4",
+    "gpa": 3.38,
+    "year": 2,
+    "semester": 1,
+    "stats": {
+      "attendance_percentage": 88,
+      "fees_total": 14600,
+      "fees_paid": 6000
+    },
+    "allowed_credits": 180
   }
 ]

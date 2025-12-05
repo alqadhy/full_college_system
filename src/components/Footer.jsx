@@ -1,21 +1,26 @@
 // HOOKS
 import { useTranslation } from "react-i18next";
 import { useContext } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 // COMPONENTS
 import Logo from "./Logo";
 
 // REACT ROUTER
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // CONTEXTS
 import { userDataContext } from "../contexts/userDataContext";
+import { langContext } from "../contexts/languageContext";
 
 // ICONS
 import { FaPhoneAlt, FaFacebookF, FaSnapchatGhost } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLocation } from "react-icons/io5";
 import { FaXTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa6";
+
+// UTILS FUNCTIONS
+import { showPopup, showToastNotification } from "../utils";
 
 function getSocialMediaIcon(socialMediaPlatform) {
   switch (socialMediaPlatform) {
@@ -34,12 +39,32 @@ function getSocialMediaIcon(socialMediaPlatform) {
 
 function Footer() {
   const { t } = useTranslation();
-  const { userData } = useContext(userDataContext);
-
-  console.log(userData);
-
+  const { userData, setUserData } = useContext(userDataContext);
+  const { lang } = useContext(langContext);
+  const { removeItem } = useLocalStorage();
+  const navigateTo = useNavigate();
 
   const socialMediaPlatforms = t("university_data.social_media", { returnObjects: true });
+
+  function handleUserLogout(e) {
+    e.preventDefault();
+
+    const logout = () => {
+      // Remove the User Data & The Token From the Local Storage
+      removeItem("token");
+      removeItem("user_data");
+      // Update the User Data To Be Empty (null)
+      setUserData(null);
+      // Show A Success Toast Notification
+      showToastNotification("success", t("alerts.logout_successfully"), lang);
+      // Navigate To The Home Page
+      navigateTo("/");
+    }
+
+    // Show Popup
+    showPopup(t("alerts.logout_confirm"), "warning", true,
+      t("buttons_and_links.confirm_button"), t("buttons_and_links.cancel_button"), logout);
+  }
 
   return (
     <footer>
@@ -55,7 +80,13 @@ function Footer() {
             <ul className="links">
               <li><Link to="/">{t("pages.home")}</Link></li>
               <li><Link to="/student/dashboard">{t("pages.dashboard")}</Link></li>
-              <li><Link to="/login">{userData ? t("pages.log_out") : t("pages.login")}</Link></li>
+              <li>
+                {
+                  userData
+                    ? <a href="#" onClick={handleUserLogout}>{t("pages.log_out")}</a>
+                    : <Link to="/login">{t("pages.login")}</Link>
+                }
+              </li>
             </ul>
           </div>
 

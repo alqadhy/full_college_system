@@ -83,19 +83,19 @@
 
 /* End Sidebar */
 /* Start Progrss Bar */
-[dir="rtl"] .stu-dashboard-page .progress-bar::before,
-[dir="rtl"] .stu-dashboard-page .progress-bar::after {
+[dir="rtl"] .progress-bar::before,
+[dir="rtl"] .progress-bar::after {
   left: initial;
   right: var(--percentage);
   transform: translate(50%, -60%);
 }
 
-[dir="rtl"] .stu-dashboard-page .progress-bar:hover::before,
-[dir="rtl"] .stu-dashboard-page .progress-bar:hover::after {
+[dir="rtl"] .progress-bar:hover::before,
+[dir="rtl"] .progress-bar:hover::after {
   transform: translate(50%, -100%);
 }
 
-[dir="rtl"] .stu-dashboard-page .progress-bar .total-fees-txt {
+[dir="rtl"] .progress-bar .total-fees-txt {
   text-align: left;
 }
 
@@ -114,6 +114,12 @@
 }
 
 /* End Responsive Table */
+/* Start Today's Table */
+[dir="rtl"] .stu-today-schedule-table .empty-paragraph {
+  text-align: right;
+}
+
+/* End Today's Table */
 /* Start Search Bar */
 [dir="rtl"] .search-bar input {
   padding: 10px var(--pad-30) 10px 10px;
@@ -136,3 +142,21 @@
 }
 
 /* End Sort Bar */
+/* Start Add New Task Field */
+[dir="rtl"] .add-new-task-field .main-btn {
+  right: initial;
+  left: 20px;
+}
+
+/* End Add New Task Field */
+/* Start Task Box */
+[dir="rtl"] .task-box.deleted {
+  transform: translateX(-50px);
+}
+
+[dir="rtl"] .task-box .options-list {
+  right: initial;
+  left: 30px;
+}
+
+/* End Task Box */
