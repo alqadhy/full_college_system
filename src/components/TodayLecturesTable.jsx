@@ -37,7 +37,7 @@ function TodayLecturesTable({ stuSchedule, todayName }) {
             ? <tbody>
               {
                 stuSchedule &&
-                stuSchedule[todayName].map(lec => {
+                stuSchedule[todayName].filter(lec => lec.id).map(lec => {
                   return (
                     <tr key={lec.id}>
                       <td className="force-ltr">{lec.time}</td>

@@ -115,6 +115,11 @@
   color: var(--primary-color);
 }
 
+.main-btn.disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+
 .main-btn::before {
   content: "";
   background-color: var(--white-color);
@@ -869,7 +874,7 @@ footer .bottom {
 }
 
 .main-table tr:nth-child(even) {
-  background-color: var(--decoration-color-5);
+  background-color: var(--light-gray-color);
 }
 
 .main-table tbody td {
@@ -957,7 +962,6 @@ footer .bottom {
 
 .weekly-schedule td .lec-box .time {
   color: var(--primary-color);
-  text-align: right;
   font-size: var(--font-size-14);
 }
 
@@ -1027,7 +1031,7 @@ footer .bottom {
 }
 
 .task-box .options-list button:hover {
-  background-color: var(--background-color);
+  background-color: var(--light-gray-color);
 }
 
 .task-box .options-list .edit-btn:hover {

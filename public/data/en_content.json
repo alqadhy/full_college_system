@@ -117,7 +117,8 @@
     "due_fees_text": "Due Fees",
     "empty_paragraph_text": "No content to show!",
     "view_message": "View Message",
-    "no_lectures_text": "No lecture at this time!"
+    "no_lectures_text": "No lecture at this time!",
+    "blocked_text": "Your are blocked! Please try again after: "
   },
   "buttons_and_links": {
     "access_dashboard_button": "Access Your Dashboard",
@@ -172,6 +173,7 @@
     "password_is_empty": "The password field is required!",
     "code_or_password_is_wrong": "The code or the passord is wrong!",
     "login_successfully": "Login Successfully!",
+    "blocked_alert": "You've been blocked for two hours!",
     "otp_is_incorrect": "Wrong OTP!",
     "passwords_are_not_identical": "Password are not identical!",
     "password_changed_successfully": "Password changed successfully!",

@@ -25,4 +25,13 @@
   color: var(--primary-color);
 }
 
+.login-page .timer-wrapper {
+  justify-content: center;
+  flex-wrap: wrap;
+  color: var(--error-color);
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
 /* End Login */

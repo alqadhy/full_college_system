@@ -12,6 +12,7 @@ import useRedirect from "../../hooks/useRedirect";
 // COMPONENTS
 import MainHeading from "../../components/MainHeading";
 import InputField from "../../components/InputField";
+import TwoHoursTimer from "../../components/TwoHoursTimer";
 
 // CONTEXTS
 import { langContext } from "../../contexts/languageContext";
@@ -31,6 +32,11 @@ function Login() {
   const { setItem, getItem } = useLocalStorage();
   const navigateTo = useNavigate();
   const { userData, setUserData } = useContext(userDataContext);
+  const [numOfAttemptions, setNumOfAttemptions] = useState(
+    getItem("num_of_attemptions") == null
+      ? 3
+      : getItem("num_of_attemptions")
+  );
 
   // SET PAGE TITLE
   usePageTitle(t("pages.login"));
@@ -42,17 +48,39 @@ function Login() {
     redirectionRoute: userData ? `/${userData.role_en}/dashboard` : "",
   });
 
-  async function handleFormSubmit(e) {
+  async function handleUserLogin(e) {
     // Prevent the default submation behaviour
     e.preventDefault();
 
+    // Decrease the number of attemptions
+    let updatedAttemptions;
+
+    if (numOfAttemptions > 0) {
+      updatedAttemptions = numOfAttemptions - 1;
+      setNumOfAttemptions(updatedAttemptions);
+      setItem("num_of_attemptions", updatedAttemptions);
+    }
+
+    if (updatedAttemptions == 0) {
+      showToastNotification("error", t("alerts.blocked_alert"), lang);
+      return;
+    }
+
     // Validate Inputs
     if (isEmpty(loginData.code.trim())) {
-      showToastNotification("error", t("alerts.code_is_empty"), lang);
+      showToastNotification(
+        "error",
+        lang == "en" ? `${t("alerts.code_is_empty")} - You have ${updatedAttemptions} attemptions left!!` : `${t("alerts.code_is_empty")} - لديك ${updatedAttemptions} محاولات متبقية!! `,
+        lang
+      );
       return;
     }
     if (isEmpty(loginData.password.trim())) {
-      showToastNotification("error", t("alerts.password_is_empty"), lang);
+      showToastNotification(
+        "error",
+        lang == "en" ? `${t("alerts.password_is_empty")} - You have ${updatedAttemptions} attemptions left!!` : `${t("alerts.password_is_empty")} - لديك ${updatedAttemptions} محاولات متبقية!! `,
+        lang
+      );
       return;
     }
 
@@ -60,7 +88,11 @@ function Login() {
     const response = await login(loginData.code, loginData.password);
 
     if (!response.success) {
-      showToastNotification("error", t("alerts.code_or_password_is_wrong"), lang);
+      showToastNotification(
+        "error",
+        lang == "en" ? `${t("alerts.code_or_password_is_wrong")} - You have ${updatedAttemptions} attemptions left!!` : `${t("alerts.code_or_password_is_wrong")} - لديك ${updatedAttemptions} محاولات متبقية!! `,
+        lang
+      );
       return;
     }
 
@@ -85,7 +117,13 @@ function Login() {
               handleChangeFn={e => { setLoginData({ ...loginData, code: e.target.value }) }} />
             <InputField type="password" label={t("inputs_labels.password_input_label")} value={loginData.password}
               handleChangeFn={e => { setLoginData({ ...loginData, password: e.target.value }) }} />
-            <button type="submit" className="main-btn" onClick={e => handleFormSubmit(e)}>
+            <button type="submit" className={numOfAttemptions == 0 ? "main-btn disabled" : "main-btn"}
+              onClick={e => {
+                if (numOfAttemptions == 0)
+                  e.preventDefault();
+                else
+                  handleUserLogin(e);
+              }}>
               {t("pages.login")}
             </button>
           </div>
@@ -93,6 +131,13 @@ function Login() {
         <Link to="/email-verification" className="forgot-psw-link">
           {t("buttons_and_links.forgot_password_link")}
         </Link>
+        {
+          numOfAttemptions == 0 &&
+          <div className="timer-wrapper flex-wrapper">
+            <p className="user-blocked">{t("text.blocked_text")}</p>
+            <TwoHoursTimer setNumOfAttemptions={setNumOfAttemptions} />
+          </div>
+        }
       </div>
     </main>
   );

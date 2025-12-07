@@ -117,7 +117,8 @@
     "due_fees_text": "الرسوم المتبقية",
     "empty_paragraph_text": "لا يوجد محتوي لعرضه!",
     "view_message": "عرض الرسالة",
-    "no_lectures_text": "لا يوجد محاضرة في هذا الوقت!"
+    "no_lectures_text": "لا يوجد محاضرة في هذا الوقت!",
+    "blocked_text": "لقد تم حظرك! الرجاء المحاولة لاحقا بعد: "
   },
   "buttons_and_links": {
     "access_dashboard_button": "الوصول إلى لوحة التحكم",
@@ -172,6 +173,7 @@
     "password_is_empty": "حقل كلمة المرور مطلوب!",
     "code_or_password_is_wrong": "الكود أو كلمة المرور غير صحيحة!",
     "login_successfully": "تم تسجيل الدخول بنجاح!",
+    "blocked_alert": "لقد تم حظرك لمدة ساعتين!",
     "otp_is_incorrect": "رمز التحقق غير صحيح!",
     "passwords_are_not_identical": "كلمتا المرور غير متطابقتين!",
     "password_changed_successfully": "تم تغيير كلمة المرور بنجاح!",
