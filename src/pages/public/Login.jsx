@@ -55,16 +55,16 @@ function Login() {
     // Decrease the number of attemptions
     let updatedAttemptions;
 
-    if (numOfAttemptions > 0) {
-      updatedAttemptions = numOfAttemptions - 1;
-      setNumOfAttemptions(updatedAttemptions);
-      setItem("num_of_attemptions", updatedAttemptions);
-    }
+    // if (numOfAttemptions > 0) {
+    //   updatedAttemptions = numOfAttemptions - 1;
+    //   setNumOfAttemptions(updatedAttemptions);
+    //   setItem("num_of_attemptions", updatedAttemptions);
+    // }
 
-    if (updatedAttemptions == 0) {
-      showToastNotification("error", t("alerts.blocked_alert"), lang);
-      return;
-    }
+    // if (updatedAttemptions == 0) {
+    //   showToastNotification("error", t("alerts.blocked_alert"), lang);
+    //   return;
+    // }
 
     // Validate Inputs
     if (isEmpty(loginData.code.trim())) {
